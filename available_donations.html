@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Donations</title>
+    <link rel="icon" href="hunger.png">
+    <style>
+       body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #f6d365, #fda085);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .container h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2rem;
+            color: #185a9d;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+        .container p {
+            font-family: 'Pacifico', cursive;
+            font-size: 2rem;
+            color: black;
+            margin-bottom: 1rem;
+           
+        }
+
+        .donation-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background: #f9f9f9;
+            text-align: left;
+        }
+
+        .container p {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .container a {
+            color: #185a9d;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .container a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Available Donations</h1>
+        <div id="donationsList"></div>
+    </div>
+
+    <script>
+        // Retrieve stored donations from localStorage
+        const donations = JSON.parse(localStorage.getItem("donations")) || [];
+
+        function displayDonations() {
+            const donationsList = document.getElementById("donationsList");
+            donationsList.innerHTML = ""; // Clear previous data
+
+            if (donations.length === 0) {
+                donationsList.innerHTML = "<p>No available donations.</p>";
+                return;
+            }
+
+            donations.forEach(donation => {
+                const donationItem = document.createElement("div");
+                donationItem.classList.add("donation-item");
+                donationItem.innerHTML = `
+                    <strong>Food Name:</strong> ${donation.foodName}<br>
+                    <strong>Quantity:</strong> ${donation.quantity}<br>
+                    <strong>District:</strong> ${donation.district}<br>
+                    <strong>Area:</strong> ${donation.area}<br>
+                    <strong>Expiry Date:</strong> ${donation.expiryDate}<br>
+                    <strong>Phone Number:</strong> ${donation.phoneNumber}<br>
+                `;
+                donationsList.appendChild(donationItem);
+            });
+        }
+
+        // Display donations when page loads
+        displayDonations();
+    </script>
+
+</body>
+</html>
