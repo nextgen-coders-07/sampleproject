@@ -310,7 +310,8 @@ button h1 {
         
         <center><button type="submit">Donate Food</button>
           <div id="navigation">
-            <button style="width: fit-content; height: 50px;"><a href="gmail.html">STORE DATA</a></button>
+            <button style="width: fit-content; height: 50px;"><a href="gmail.html">STORE DATA</a></button><br>
+            <button><a href="D:\Admin\Documents\OneDrive\Desktop\food project\available_donations.html" style="text-decoration: none;color: white;">AVAILABLE DONATION</a></button>
           </div></center>
       </form>
         
@@ -476,6 +477,34 @@ button h1 {
         donationsList.appendChild(donationItem);
       });
     }
+     // Save donation details to localStorage
+function updateLocalStorage() {
+  localStorage.setItem("donations", JSON.stringify(donations));
+}
+
+// Modify the saveDonation function to update localStorage
+function saveDonation(donation) {
+  if (donations.some(existingDonation => 
+      existingDonation.foodName === donation.foodName &&
+      existingDonation.district === donation.district &&
+      existingDonation.area === donation.area)) {
+    alert("This donation already exists.");
+    return;
+  }
+
+  donations.push(donation);
+  updateLocalStorage(); // Store in localStorage
+  renderDonations();
+  
+  const { district, area } = donation;
+  const location = getLocationForArea(district, area);
+  if (location) {
+    L.marker([location.lat, location.lng]).addTo(map)
+      .bindPopup(`${donation.foodName} - ${donation.quantity} Quantity`)
+      .openPopup();
+  }
+}
+
 
     // Handle donation form submission
     document.getElementById("donationForm").addEventListener("submit", function(event) {
@@ -509,6 +538,7 @@ button h1 {
       // Clear form
       document.getElementById("donationForm").reset();
     });
+   
   </script>
 </body>
 </html>
