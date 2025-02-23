@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Secure Food Waste Donation System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #f6d365, #fda085);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            max-width: 600px;
+        }
+
+        .container h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: #185a9d;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .container p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .container button {
+            background: linear-gradient(120deg, #43cea2, #185a9d);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 0.5rem;
+        }
+
+        .container button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body onload="checkLogin()">
+
+<div class="container">
+    <h2>Welcome to Your Dashboard</h2>
+    <p>Manage your donations, view food requests, and help make a difference.</p>
+    <button onclick="logout()">Logout</button>
+    <button><a href="D:\Admin\Documents\OneDrive\Desktop\food project\home.html" style="text-decoration: none; color: white;">HOME PAGE</a></button>
+    <button><a href="D:\Admin\Documents\OneDrive\Desktop\food project\about.html" style="text-decoration: none; color: white;">ABOUT US </a></button>
+</div>
+
+<script>
+    function checkLogin() {
+        let loggedIn = localStorage.getItem("loggedIn");
+        if (!loggedIn) {
+            alert("You must log in first!");
+            window.location.href = "index.html";
+        }
+    }
+
+    function logout() {
+        localStorage.removeItem("loggedIn");
+        alert("Logged out successfully!");
+        window.location.href = "index.html";
+    }
+</script>
+
+</body>
+</html>

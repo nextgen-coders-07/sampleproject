@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+}
+
+.container h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: #185a9d;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container input {
+    width: 90%;
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    display: block;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.container input:focus {
+    border-color: #185a9d;
+    box-shadow: 0 0 8px rgba(24, 90, 157, 0.3);
+}
+
+.container button {
+    background: linear-gradient(120deg, #43cea2, #185a9d);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+}
+
+.container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container p {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.container a {
+    color: #185a9d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter Username" required>
+    <input type="password" id="password" placeholder="Enter Password" required>
+    <button onclick="login()">Login</button>
+    <button onclick="logout()" style="background-color: red;">Logout</button>
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+</div>
+
+<script>
+    function login() {
+        let user = document.getElementById("username").value;
+        let pass = document.getElementById("password").value;
+        let storedUser = localStorage.getItem("savedUsername");
+        let storedPass = localStorage.getItem("savedPassword");
+
+        if (user === storedUser && pass === storedPass) {
+            localStorage.setItem("loggedIn", "true");
+            alert("Login Successful!");
+            window.location.href = "dashboard.html";
+        } else {
+            alert("Invalid Credentials!");
+        }
+    }
+
+    function logout() {
+        localStorage.removeItem("loggedIn");
+        alert("Logged out successfully!");
+        window.location.href = "signup.html";
+    }
+</script>
+
+</body>
+</html>

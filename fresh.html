@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUNGER RELIEF|Contribution PAGE</title>
+  <link rel="icon" href="hunger.png">
+  <header>
+    <a href="about.html" style="text-decoration: none;">
+      <img src="hunger.png" alt="Logo" style="height: 90px; vertical-align: middle; margin-right: 10px;">
+    </a>
+    HUNGER RELIEF
+    
+  </header>
+
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #f6d365, #fda085);
+      color: #333;
+    }
+    button a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  background: linear-gradient(120deg, #43cea2, #185a9d);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+button h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  background: linear-gradient(120deg, #43cea2, #185a9d);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+button h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+    header {
+      background: linear-gradient(120deg, #43cea2, #185a9d);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+      border-bottom: 5px solid #fda085;
+    }
+  
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #43cea2;
+      text-align: center;
+      font-size: 1.8rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #43cea2;
+      box-shadow: 0 0 8px rgba(67, 206, 162, 0.4);
+      outline: none;
+    }
+
+    button {
+      background: linear-gradient(120deg, #43cea2, #185a9d);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      width: fit-content;
+      height: 50px;
+      text-align: center;
+    }
+
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Available Donations Section Enhancements */
+    ul#donations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul#donations li {
+      list-style: none;
+      width: calc(33.33% - 1rem);
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    ul#donations li:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    ul#donations li .details {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    ul#donations li .details strong {
+      font-size: 1.2rem;
+      color: #185a9d;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    ul#donations li button {
+      background: linear-gradient(120deg, #ff512f, #dd2476);
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      align-self: flex-end;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    ul#donations li button:hover {
+      background: linear-gradient(120deg, #dd2476, #ff512f);
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive Adjustments for Cards */
+    @media (max-width: 768px) {
+      ul#donations li {
+        width: calc(50% - 1rem);
+      }
+    }
+
+    @media (max-width: 480px) {
+      ul#donations li {
+        width: 100%;
+      }
+    }
+
+    footer {
+      background: linear-gradient(120deg, #43cea2, #185a9d);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      border-top: 5px solid #fda085;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    #map {
+      height: 400px;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    
+  </style>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+  
+
+  <main>
+    <section>
+      <h2>Contribution Food</h2>
+      
+      <form id="donationForm">
+        <label for="foodName">Food Name:</label>
+        <input type="text" id="foodName" placeholder="Enter food name" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" placeholder="Enter quantity (e.g., kg, servings)" required>
+
+        <label for="district">District:</label>
+        <select id="district" required onchange="updateAreas()">
+          <option value="" disabled selected>Select Your District</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Madurai">Madurai</option>
+          <option value="Trichy">Trichy</option>
+          <option value="Salem">Salem</option>
+          <option value="Erode">Erode</option>
+          <option value="Tirunelveli">Tirunelveli</option>
+          <option value="Vellore">Vellore</option>
+          <option value="Tiruppur">Tiruppur</option>
+        </select>
+
+        <label for="area">Area:</label>
+        <select id="area" required>
+          <option value="" disabled selected>Select Your Area</option>
+        </select>
+
+        <label for="expiryDate">Exact Time:</label>
+        <input type="time" id="expiryDate" required>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" placeholder="Enter your phone number" required>
+        
+        <center><button type="submit"> Pre Donate Food</button>
+          <div id="navigation">
+            <button style="width: fit-content; height: 50px;"><a href="gmail3.html">STORE DATA</a></button>
+          </div></center>
+      </form>
+        
+        
+      
+    </section>
+
+    <section>
+      <h2>Available Contribution</h2>
+      <ul id="donations"></ul>
+    </section>
+
+    <!-- Map Section -->
+    <section>
+      <h2>Donation Locations</h2>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hunger Relief. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Array to store donation data
+    let donations = [];
+
+    // Function to update areas based on district selection
+    function updateAreas() {
+      const district = document.getElementById("district").value;
+      const areaSelect = document.getElementById("area");
+
+      // Clear previous options
+      areaSelect.innerHTML = "<option value='' disabled selected>Select Your Area</option>";
+
+      if (district) {
+        const areas = {
+          "Chennai": ["Anna Nagar", "T. Nagar", "Korattur"],
+          "Coimbatore": ["Gandhipuram", "R.S. Puram","Saravanam patti", "Peelamedu"],
+          "Madurai": ["Koodal Nagar", "Simmakkal", "Mattuthavani"],
+          "Trichy": ["Srirangam", "Thillai Nagar", "Kattu Sathy"],
+          "Salem": ["Omalur", "Sankari", "Attur"],
+          "Erode": ["Gobichettipalayam", "Perundurai", "Bhavani"],
+          "Tirunelveli": ["Palayamkottai", "Tirunelveli Junction", "Muthusamy Nagar"],
+          "Vellore": ["Katpadi", "Gudiyatham", "Ambur"],
+          "Tiruppur": ["Avinashi", "Tiruppur City", "Perumanallur"]
+        };
+
+        if (areas[district]) {
+          areas[district].forEach(area => {
+            const option = document.createElement("option");
+            option.value = area;
+            option.text = area;
+            areaSelect.appendChild(option);
+          });
+        }
+      }
+    }
+
+    // Initialize Leaflet Map
+    const map = L.map('map').setView([11.0168, 76.9558], 6); // Set default view to Coimbatore (or another city)
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Save donation and add a marker to the map
+    function saveDonation(donation) {
+      // Check for duplicates based on food name, district, and area
+      if (donations.some(existingDonation => 
+          existingDonation.foodName === donation.foodName &&
+          existingDonation.district === donation.district &&
+          existingDonation.area === donation.area)) {
+        alert("This donation already exists.");
+        return;
+      }
+
+      donations.push(donation);
+      renderDonations();
+      
+      // Add marker for the donation location
+      const { district, area } = donation;
+      const location = getLocationForArea(district, area);
+      if (location) {
+        L.marker([location.lat, location.lng]).addTo(map)
+          .bindPopup(`${donation.foodName} - ${donation.quantity} Quantity`)
+          .openPopup();
+      }
+    }
+
+    // Example function to get coordinates for a district and area (customize as needed)
+    function getLocationForArea(district, area) {
+      const locations = {
+        "Coimbatore": {
+          "Gandhipuram": { lat: 11.0168, lng: 76.9558 },
+          "R.S. Puram": { lat: 11.0215, lng: 76.9675 },
+          "Saravanam patti": { lat: 10.9240, lng: 77.0173 },
+        },
+        "Madurai": {
+      "Koodal Nagar": { lat: 9.9290, lng: 78.1200 },
+      "Simmakkal": { lat: 9.9200, lng: 78.1250 },
+      "Mattuthavani": { lat: 9.9095, lng: 78.1235 }
+    },
+    "Chennai": {
+      "Anna Nagar": { lat: 13.0836, lng: 80.2052 },
+      "T. Nagar": { lat: 13.0360, lng: 80.2335 },
+      "Korattur": { lat: 13.1301, lng: 80.1955 }
+    },"Trichy": {
+      "Srirangam": { lat: 10.7885, lng: 78.7072 },
+      "Thillai Nagar": { lat: 10.8035, lng: 78.6804 },
+      "Kattu Sathy": { lat: 10.8534, lng: 78.6002 }
+    },
+    "Salem": {
+      "Omalur": { lat: 11.7844, lng: 77.8034 },
+      "Sankari": { lat: 11.6097, lng: 77.9364 },
+      "Attur": { lat: 11.5049, lng: 78.6132 }
+    },
+    "Erode": {
+      "Gobichettipalayam": { lat: 11.5311, lng: 77.2327 },
+      "Perundurai": { lat: 11.3984, lng: 77.6032 },
+      "Bhavani": { lat: 11.6029, lng: 77.7011 }
+    },
+    "Tirunelveli": {
+      "Palayamkottai": { lat: 8.7012, lng: 77.7465 },
+      "Tirunelveli Junction": { lat: 8.7136, lng: 77.7580 },
+      "Muthusamy Nagar": { lat: 8.7228, lng: 77.7495 }
+    },
+    "Vellore": {
+      "Katpadi": { lat: 12.9351, lng: 79.1316 },
+      "Gudiyatham": { lat: 12.7231, lng: 78.6690 },
+      "Ambur": { lat: 12.8945, lng: 78.6964 }
+    },
+    "Tiruppur": {
+      "Avinashi": { lat: 11.1741, lng: 77.2892 },
+      "Tiruppur City": { lat: 11.1071, lng: 77.3511 },
+      "Perumanallur": { lat: 11.2216, lng: 77.3943 },
+        
+        }
+      };
+
+      return locations[district] ? locations[district][area] : null;
+    }
+
+    // Render donations in the list
+    function renderDonations() {
+      const donationsList = document.getElementById("donations");
+      donationsList.innerHTML = "";  // Clear current list
+
+      donations.map((donation, index) => {
+        const donationItem = document.createElement("li");
+        donationItem.innerHTML = `
+          <div class="details">
+            <strong>Food Name:</strong> ${donation.foodName}<br>
+            <strong>Quantity:</strong> ${donation.quantity}<br>
+            <strong>District:</strong> ${donation.district}<br>
+            <strong>Area:</strong> ${donation.area}<br>
+            <strong>Expiry Date:</strong> ${donation.expiryDate}<br>
+            <strong>Phone Number:</strong> ${donation.phoneNumber}<br>
+            <button onclick="deleteDonation(${index})">Delete Donation</button>
+        
+          </div>
+        `;
+        donationsList.appendChild(donationItem);
+      });
+    }
+
+    // Handle donation form submission
+    document.getElementById("donationForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const foodName = document.getElementById("foodName").value;
+      const quantity = document.getElementById("quantity").value;
+      const district = document.getElementById("district").value;
+      const area = document.getElementById("area").value;
+      const expiryDate = document.getElementById("expiryDate").value;
+      const phoneNumber = document.getElementById("phoneNumber").value;
+      
+      
+      // Validation checks
+      if (!foodName || !quantity || !district || !area || !expiryDate || !phoneNumber) {
+        alert("All fields are required.");
+        return;
+      }
+
+      const donation = {
+        foodName,
+        quantity,
+        district,
+        area,
+        expiryDate,
+        phoneNumber
+      };
+
+      saveDonation(donation);
+      
+      // Clear form
+      document.getElementById("donationForm").reset();
+    });
+  </script>
+</body>
+</html>
